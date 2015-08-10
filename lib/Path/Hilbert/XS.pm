@@ -57,7 +57,13 @@ script:
     PP  1.322e-05  --      -3.62%
     XS  4.788e-07  96.38%  --
 
-(Statistics were done using L<Dumbbench>.)
+(Statistics collected using L<Dumbbench>.)
+
+            Rate    PP    XS
+    PP   71028/s    --  -98%
+    XS 3703704/s 5114%    --
+
+(Statistics collected using L<Benchmark>.)
 
 =head1 CREDITS
 
