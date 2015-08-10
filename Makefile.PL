@@ -5,7 +5,7 @@ WriteMakefile(
     VERSION_FROM   => 'lib/Path/Hilbert/XS.pm',
     PREREQ_PM      => { 'Test::More' => 0 },
     ABSTRACT_FROM  => 'lib/Path/Hilbert/XS.pm',
-    AUTHOR         => 'Sawyer X <xsawyerx@cpan.org>, Gonzalo Diethelm',
+    AUTHOR         => 'Sawyer X <xsawyerx@cpan.org>, Gonzalo Diethelm <gonzus@cpan.org>',
     #LIBS           => [''],
     DEFINE         => '',
     INC            => '-I.',
