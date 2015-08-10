@@ -33,6 +33,32 @@ This implements L<Path::Hilbert> in XS for speed and awesomesauceness.
 
 The OO interface is not available (yet?).
 
+=head1 WHY
+
+While L<Path::Hilbert> is a solid module, we just wanted speed when dealing
+with abundant amount of data.
+
+Here are some statistics, generated using the bundled F<tools/benchmark.pl>
+script:
+
+    -- d2xy --
+    PP: Rounded run time per iteration: 1.4496e-05 +/- 4.8e-08 (0.3%)
+    XS: Rounded run time per iteration: 5.1150e-07 +/- 6.3e-10 (0.1%)
+
+        Time       PP      XS
+    PP  1.450e-05  --      -3.53%
+    XS  5.115e-07  96.47%  --
+
+    -- xy2d--
+    PP: Rounded run time per iteration: 1.3215e-05 +/- 2.7e-08 (0.2%)
+    XS: Rounded run time per iteration: 4.7877e-07 +/- 8.3e-10 (0.2%)
+
+        Time       PP      XS
+    PP  1.322e-05  --      -3.62%
+    XS  4.788e-07  96.38%  --
+
+(Statistics were done using L<Dumbbench>.)
+
 =head1 CREDITS
 
 =over 4
