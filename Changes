@@ -1,0 +1,7 @@
+0.002
+        * Improve portability. (Rafael Garcia Suarez)
+        * Added this Changelog.
+        * Some statistics in POD.
+
+0.001   2015-08-10
+        * First version.
