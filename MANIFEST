@@ -6,3 +6,5 @@ ppport.h
 README.md
 t/basic.t
 XS.xs
+Changes
+MANIFEST.SKIP
