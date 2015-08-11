@@ -4,7 +4,7 @@ use warnings;
 use XSLoader;
 use parent 'Exporter';
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 our @EXPORT  = qw<d2xy xy2d>;
 
 XSLoader::load( 'Path::Hilbert::XS', $VERSION );
@@ -18,6 +18,10 @@ __END__
 =head1 NAME
 
 Path::Hilbert::XS - XS implementation of a Hilbert Path algorithm
+
+=head1 VERSION
+
+0.002
 
 =head1 SYNOPSIS
 
