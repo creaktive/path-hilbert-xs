@@ -116,4 +116,3 @@ d2xy(IV side, IV d)
     EXTEND(SP, 2);
     mPUSHi(x);
     mPUSHi(y);
-    PUTBACK;
