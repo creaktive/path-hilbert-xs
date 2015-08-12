@@ -6,6 +6,19 @@
 
 #include <math.h>
 
+#define MAX_BITS 32
+
+static IV Pow2[MAX_BITS] = {
+  0x00000001, 0x00000002, 0x00000004, 0x00000008,
+  0x00000010, 0x00000020, 0x00000040, 0x00000080,
+  0x00000100, 0x00000200, 0x00000400, 0x00000800,
+  0x00001000, 0x00002000, 0x00004000, 0x00008000,
+  0x00010000, 0x00020000, 0x00040000, 0x00080000,
+  0x00100000, 0x00200000, 0x00400000, 0x00800000,
+  0x01000000, 0x02000000, 0x04000000, 0x08000000,
+  0x10000000, 0x20000000, 0x40000000, 0x80000000,
+};
+
 /* rotate/flip a quadrant appropriately */
 static void hilbert_rot(IV n, IV *x, IV *y, IV rx, IV ry) {
   if (ry) {
@@ -24,8 +37,18 @@ static void hilbert_rot(IV n, IV *x, IV *y, IV rx, IV ry) {
 }
 
 static IV hilbert_valid_n(IV side) {
-  NV rv = pow(2, (IV) ((log(side) / log(2)) + 0.5));
-  return (IV) rv;
+  IV e;
+  for (e = 0; e < MAX_BITS; ++e) {
+    if (side <= Pow2[e]) {
+      break;
+    }
+  }
+  if (e >= MAX_BITS) {
+    /* This is BAAAAAAD */
+    return 0;
+  }
+
+  return Pow2[e];
 }
 
 /* convert (x,y) to d */
