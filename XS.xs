@@ -22,7 +22,6 @@ static void hilbert_rot(IV n, IV *x, IV *y, IV rx, IV ry) {
 }
 
 static IV hilbert_valid_n(IV side) {
-  IV e;
   int count = 0;
   for (count = 0; side > 0; ++count) {
     side >>= 1;
