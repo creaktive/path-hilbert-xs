@@ -83,9 +83,9 @@ script:
 
 =over 4
 
-=item * Sawyer X C<< xsawyerx AT cpan DOT org >>
-
 =item * Gonzalo Diethelm C<< gonzus AT cpan DOT org >>
+
+=item * Sawyer X C<< xsawyerx AT cpan DOT org >>
 
 =back
 
